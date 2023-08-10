@@ -5,17 +5,17 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"tafa/task-b/controllers"
 	"time"
-	"yoga/task-a/controllers"
 
 	_ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
 
-	var connectionString = os.Getenv("CONNECTION_DB")
+	var connect_db = os.Getenv("MAIN_DB")
 	fmt.Println("")
-	db, err := sql.Open("mysql", connectionString)
+	db, err := sql.Open("mysql", connect_db)
 	if err != nil {
 		log.Fatal("error connettion to db", err.Error())
 	}
@@ -30,8 +30,8 @@ func main() {
 		fmt.Println("")
 	}
 	defer db.Close()
-	fmt.Println("Selamat datang diaplikasi Go.Trans")
-	fmt.Println("Aplikasi yang digunakan untuk top - up dan transfer uang kesesama pengguna")
+	fmt.Println("Selamat Datang di Aplikasi Go.Trans")
+	fmt.Println("Aplikasi yang digunakan untuk top up dan transfer uang ke sesama pengguna")
 	fmt.Println("Silahkan input pilihan anda:")
 	fmt.Println("Pilih Menu:\n1. Login.\n2. Register.")
 	var pilihan int

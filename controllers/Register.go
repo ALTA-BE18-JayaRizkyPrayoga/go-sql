@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
-	"yoga/task-a/entities"
+	"tafa/task-b/entities"
 )
 
 func Register(db *sql.DB) {

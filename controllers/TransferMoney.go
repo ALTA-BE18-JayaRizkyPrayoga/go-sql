@@ -52,11 +52,11 @@ func Transfer(db *sql.DB) {
 		return
 	}
 
-	_, err = db.Exec("INSERT INTO transfers (us1er_sender, user_reciver, transaksi) VALUES ((SELECT id FROM users WHERE phone_number = ?), (SELECT id FROM users WHERE phone_number = ?), ?)", Pengirim, Penerima, Tf)
+	_, err = db.Exec("INSERT INTO transfers (user_sender, user_reciver, transaksi) VALUES ((SELECT id FROM users WHERE phone_number = ?), (SELECT id FROM users WHERE phone_number = ?), ?)", Pengirim, Penerima, Tf)
 	if err != nil {
 		fmt.Println("Error inserting transaction:", err.Error())
 		return
 	}
 
-	fmt.Println("Transfer berhasil! Saldo Anda:", saldoAkhirPengirim)
+	fmt.Println("Transfer berhasil!\n", "Sisa saldo Anda:", saldoAkhirPengirim)
 }

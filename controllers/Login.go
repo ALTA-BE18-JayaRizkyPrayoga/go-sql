@@ -3,7 +3,7 @@ package controllers
 import (
 	"database/sql"
 	"fmt"
-	"yoga/task-a/entities"
+	"tafa/task-b/entities"
 )
 
 func LoginUser(db *sql.DB) {

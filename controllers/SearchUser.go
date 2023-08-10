@@ -3,7 +3,7 @@ package controllers
 import (
 	"database/sql"
 	"fmt"
-	"yoga/task-a/entities"
+	"tafa/task-b/entities"
 )
 
 func CariUser(db *sql.DB) {
@@ -31,7 +31,7 @@ func CariUser(db *sql.DB) {
 
 		fmt.Println("ID:", v.Id)
 		fmt.Println("Name:", v.Name)
-		fmt.Println("Nomor Email:", v.Email)
+		fmt.Println("Email:", v.Email)
 		fmt.Println("Alamat:", v.Address)
 
 	}

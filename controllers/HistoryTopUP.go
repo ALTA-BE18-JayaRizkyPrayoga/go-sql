@@ -4,7 +4,7 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
-	"yoga/task-a/entities"
+	"tafa/task-b/entities"
 )
 
 func HistoryTopUp(db *sql.DB) {
